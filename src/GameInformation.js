@@ -25,7 +25,7 @@ const FinishTurn = styled.button`
 export default ({ userIsCurrentPlayer }) => {
 	return (
 		<GameInformationContainer>
-      <FinishTurn>Finish Turn</FinishTurn>
+      {userIsCurrentPlayer ? <FinishTurn>Finish Turn</FinishTurn> : ''}
       Current Player: {userIsCurrentPlayer ? 'User' : 'Computer'}
 		</GameInformationContainer>
 	);
