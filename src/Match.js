@@ -2,34 +2,42 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SingleMatchContainer = styled.div`
-	height: 6rem;
+	height: 8rem;
 	width: 4rem;
 	cursor: pointer;
-  opacity: ${props => props.visible ? '100' : '0'};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #243d39;
+
+  @media (min-width: 900px) {
+    &:hover {
+      background: #335751;
+    }
+	}
 `;
 
 const MatchBottom = styled.div`
 	height: 5rem;
 	width: 1rem;
 	background: #915535;
-	cursor: pointer;
+  cursor: pointer;
+  opacity: ${props => props.visible ? '100' : '0'};
 `;
 
 const MatchTip = styled.div`
   height: 1rem;
   width: 1rem;
   background: red;
+  opacity: ${props => props.visible ? '100' : '0'};
 `
 
 export default ({ visible, matchNumber, onClick }) => {
 	return (
 		<SingleMatchContainer visible={visible} onClick={() => onClick(matchNumber)}>
-      <MatchTip />
-			<MatchBottom /> 
+      <MatchTip visible={visible} />
+			<MatchBottom visible={visible} /> 
 		</SingleMatchContainer>
 	);
 };

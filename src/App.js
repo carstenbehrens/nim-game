@@ -68,7 +68,7 @@ const MatchesContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 80%;
+	height: 70%;
 	width: 90%;
 
 	@media (max-width: 900px) {
