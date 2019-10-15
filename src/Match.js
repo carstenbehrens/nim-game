@@ -33,11 +33,12 @@ const MatchTip = styled.div`
   opacity: ${props => props.visible ? '100' : '0'};
 `
 
-export default ({ visible, matchNumber, onClick }) => {
+
+export default ({ visible, inGame, matchNumber, onClick }) => {
 	return (
-		<SingleMatchContainer visible={visible} onClick={() => onClick(matchNumber)}>
+		<SingleMatchContainer onClick={() => onClick(matchNumber)}>
       <MatchTip visible={visible} />
 			<MatchBottom visible={visible} /> 
-		</SingleMatchContainer>
+    </SingleMatchContainer>
 	);
 };

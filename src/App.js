@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import Match from './Match';
 import GameInformation from './GameInformation';
+import {isLegalMove} from './utils';
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -79,32 +80,44 @@ const MatchesContainer = styled.div`
 `;
 
 // 13 Matches are available at the beginning of the game
-const initialState = [
-	true,
-	true,
-	true,
-	true,
-	true,
-	true,
-	true,
-	true,
-	true,
-	true,
-	true,
-	true,
-	true
+const matchesSelectedArray = [
+	false,
+	false,
+	false,
+	false,
+	false,
+	false,
+	false,
+	false,
+	false,
+	false,
+	false,
+	false,
+	false
 ];
 
 const App = () => {
-	const [matchesState, setMatchesState] = useState(initialState);
+	const [matchesState, setMatchesState] = useState(matchesSelectedArray);
 	const [userIsCurrentPlayer, setUserIsCurrentPlayer] = useState(true);
 
-	const handleMatchState = matchNumber => {
+	const handleMatchesState = matchNumber => {
 		setMatchesState(matchesState => {
-      matchesState[matchNumber] = !matchesState[matchNumber]
-      return [...matchesState]
-    })
-  };
+			// Select and deselect the matches
+			matchesState[matchNumber] = !matchesState[matchNumber];
+			return [...matchesState];
+		});
+	};
+
+	const handleFinishTurn = matchesState => {
+		if (isLegalMove(matchesState)) {
+			// Removes the matches that were selected from the game
+			setMatchesState(matchesState => matchesState.filter(match => match === false));
+			// Change Players
+			setUserIsCurrentPlayer(userIsCurrentPlayer => !userIsCurrentPlayer);
+		} else {
+      alert('Please select more then 1 and less then 3 matches')
+    }
+	};
 
 	return (
 		<GameContainer>
@@ -112,14 +125,18 @@ const App = () => {
 			<MatchesContainer>
 				{matchesState.map((el, i) => (
 					<Match
-						visible={el}
+						visible={!el}
 						key={i}
 						matchNumber={i}
-						onClick={handleMatchState}
+						onClick={handleMatchesState}
 					/>
 				))}
 			</MatchesContainer>
-			<GameInformation userIsCurrentPlayer={userIsCurrentPlayer} />
+			<GameInformation
+				handleFinishTurn={handleFinishTurn}
+				userIsCurrentPlayer={userIsCurrentPlayer}
+				matchesState={matchesState}
+			/>
 		</GameContainer>
 	);
 };
