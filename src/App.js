@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import Match from './Match';
 import GameInformation from './GameInformation';
-import {isLegalMove} from './utils';
+import { isLegalMove, isGameOver, getInitialState } from './utils';
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -80,25 +80,21 @@ const MatchesContainer = styled.div`
 `;
 
 // 13 Matches are available at the beginning of the game
-const initialMatchesSelectedArray = [
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false
-];
+const initialMatchesSelectedArray = getInitialState();
 
 const App = () => {
-	const [matchesSelectedState, setMatchesState] = useState(initialMatchesSelectedArray);
+	const [matchesSelectedState, setMatchesState] = useState(
+		initialMatchesSelectedArray
+	);
 	const [userIsCurrentPlayer, setUserIsCurrentPlayer] = useState(true);
+
+	useEffect(() => {
+		if (isGameOver(matchesSelectedState)) {
+			alert(`Game Over! ${userIsCurrentPlayer ? 'Computer' : 'User'} Won`);
+			// Restart Game
+			setMatchesState(getInitialState());
+		}
+	}, [matchesSelectedState, userIsCurrentPlayer]);
 
 	const handleMatchesState = matchNumber => {
 		setMatchesState(matchesSelectedState => {
@@ -111,12 +107,16 @@ const App = () => {
 	const handleFinishTurn = matchesSelectedState => {
 		if (isLegalMove(matchesSelectedState)) {
 			// Removes the matches that were selected from the game
-			setMatchesState(matchesSelectedState => matchesSelectedState.filter(match => match === false));
+			setMatchesState(matchesSelectedState =>
+				matchesSelectedState.filter(match => match === false)
+			);
 			// Change Players
 			setUserIsCurrentPlayer(userIsCurrentPlayer => !userIsCurrentPlayer);
-		} else {
-      alert('Please select more then 1 and less then 3 matches')
-    }
+		}
+
+		if (!isLegalMove(matchesSelectedState)) {
+			alert('Please select more then 1 and less then 3 matches');
+		}
 	};
 
 	return (
