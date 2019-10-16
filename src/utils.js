@@ -6,3 +6,8 @@ export const isLegalMove = matchesSelectedState => {
   );
   return totalSelectedMatches > 0 && totalSelectedMatches < 4;
 }
+
+export const isGameOver = matchesState => {
+  return length(matchesState) === 1;
+}
+
