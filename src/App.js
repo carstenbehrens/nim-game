@@ -80,7 +80,7 @@ const MatchesContainer = styled.div`
 `;
 
 // 13 Matches are available at the beginning of the game
-const matchesSelectedArray = [
+const initialMatchesSelectedArray = [
 	false,
 	false,
 	false,
@@ -97,7 +97,7 @@ const matchesSelectedArray = [
 ];
 
 const App = () => {
-	const [matchesSelectedState, setMatchesState] = useState(matchesSelectedArray);
+	const [matchesSelectedState, setMatchesState] = useState(initialMatchesSelectedArray);
 	const [userIsCurrentPlayer, setUserIsCurrentPlayer] = useState(true);
 
 	const handleMatchesState = matchNumber => {

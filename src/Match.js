@@ -34,7 +34,7 @@ const MatchTip = styled.div`
 `
 
 
-export default ({ visible, inGame, matchNumber, onClick }) => {
+export default ({ visible, matchNumber, onClick }) => {
 	return (
 		<SingleMatchContainer onClick={() => onClick(matchNumber)}>
       <MatchTip visible={visible} />
