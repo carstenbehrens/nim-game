@@ -5,8 +5,8 @@ describe("check if move is legal", () => {
     expect(isLegalMove([])).toBe(false);
   });
 
-  test('1 matche is selected', () => {
-    expect(isLegalMove([true])).toBe(true);
+  test('1 match is selected', () => {
+    expect(isLegalMove([true, false, false])).toBe(true);
   });
 
   test('4 matches are selected', () => {
