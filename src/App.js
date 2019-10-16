@@ -97,21 +97,21 @@ const matchesSelectedArray = [
 ];
 
 const App = () => {
-	const [matchesState, setMatchesState] = useState(matchesSelectedArray);
+	const [matchesSelectedState, setMatchesState] = useState(matchesSelectedArray);
 	const [userIsCurrentPlayer, setUserIsCurrentPlayer] = useState(true);
 
 	const handleMatchesState = matchNumber => {
-		setMatchesState(matchesState => {
+		setMatchesState(matchesSelectedState => {
 			// Select and deselect the matches
-			matchesState[matchNumber] = !matchesState[matchNumber];
-			return [...matchesState];
+			matchesSelectedState[matchNumber] = !matchesSelectedState[matchNumber];
+			return [...matchesSelectedState];
 		});
 	};
 
-	const handleFinishTurn = matchesState => {
-		if (isLegalMove(matchesState)) {
+	const handleFinishTurn = matchesSelectedState => {
+		if (isLegalMove(matchesSelectedState)) {
 			// Removes the matches that were selected from the game
-			setMatchesState(matchesState => matchesState.filter(match => match === false));
+			setMatchesState(matchesSelectedState => matchesSelectedState.filter(match => match === false));
 			// Change Players
 			setUserIsCurrentPlayer(userIsCurrentPlayer => !userIsCurrentPlayer);
 		} else {
@@ -123,7 +123,7 @@ const App = () => {
 		<GameContainer>
 			<GlobalStyle />
 			<MatchesContainer>
-				{matchesState.map((el, i) => (
+				{matchesSelectedState.map((el, i) => (
 					<Match
 						visible={!el}
 						key={i}
@@ -135,7 +135,7 @@ const App = () => {
 			<GameInformation
 				handleFinishTurn={handleFinishTurn}
 				userIsCurrentPlayer={userIsCurrentPlayer}
-				matchesState={matchesState}
+				matchesSelectedState={matchesSelectedState}
 			/>
 		</GameContainer>
 	);

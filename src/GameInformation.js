@@ -22,10 +22,10 @@ const FinishTurn = styled.button`
 	text-transform: uppercase;
 `;
 
-export default ({ userIsCurrentPlayer, handleFinishTurn, matchesState }) => {
+export default ({ userIsCurrentPlayer, handleFinishTurn, matchesSelectedState }) => {
 	return (
 		<GameInformationContainer>
-			<FinishTurn onClick={() => handleFinishTurn(matchesState)}>
+			<FinishTurn onClick={() => handleFinishTurn(matchesSelectedState)}>
 				Finish Turn
 			</FinishTurn>
 			<p>Player: </p>

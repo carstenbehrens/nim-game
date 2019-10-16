@@ -1,8 +1,8 @@
 import { length } from 'ramda';
 
-export const isLegalMove = matchesState => {
+export const isLegalMove = matchesSelectedState => {
   const totalSelectedMatches = length(
-    matchesState.filter(match => match === true)
+    matchesSelectedState.filter(match => match === true)
   );
   return totalSelectedMatches > 0 && totalSelectedMatches < 4;
 }
