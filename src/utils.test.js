@@ -1,18 +1,22 @@
-import {isLegalMove, isGameOver} from './utils'
+import {isLegalMove, isGameOver, getTotalSelectedMatches} from './utils'
 
 describe("check if move is legal", () => {
   test('no matches are selected', () => {
-    expect(isLegalMove([])).toBe(false);
+    expect(isLegalMove([false, false])).toBe(false);
   });
 
-  test('1 matche is selected', () => {
-    expect(isLegalMove([true])).toBe(true);
+  test('1 match is selected', () => {
+    expect(isLegalMove([true, false, false])).toBe(true);
   });
 
   test('4 matches are selected', () => {
-    expect(isLegalMove([true, true, true, true])).toBe(false);
+    expect(isLegalMove([true, true, true, true, false, false])).toBe(false);
   });
 });
+
+test('return sum of selected matches', () => {
+  expect(getTotalSelectedMatches([true, true])).toBe(2);
+})
 
 describe("check if game is over", () => {
   test('one match is left, game is over', () => {

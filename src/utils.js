@@ -1,10 +1,19 @@
-import { length } from 'ramda';
+import { length, not } from 'ramda';
 
 export const isLegalMove = matchesSelectedState => {
-	const totalSelectedMatches = length(
-		matchesSelectedState.filter(match => match === true)
+	const totalSelectedMatches = getTotalSelectedMatches(matchesSelectedState)
+	return (
+		totalSelectedMatches > 0 &&
+    totalSelectedMatches < 4 &&
+    not(selectedAllMatches(matchesSelectedState))
 	);
-	return totalSelectedMatches > 0 && totalSelectedMatches < 4;
+};
+
+export const getTotalSelectedMatches = matchesSelectedState =>
+	length(matchesSelectedState.filter(match => match === true));
+
+export const selectedAllMatches = matchesSelectedState => {
+	return getTotalSelectedMatches(matchesSelectedState) === length(matchesSelectedState);
 };
 
 export const isGameOver = matchesState => {
