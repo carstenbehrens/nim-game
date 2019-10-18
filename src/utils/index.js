@@ -9,10 +9,10 @@ export const isLegalMove = matchesSelectedState => {
 	);
 };
 
-const getTotalSelectedMatches = matchesSelectedState =>
-	matchesSelectedState.filter(match => match === true);
+export const getTotalSelectedMatches = matchesSelectedState =>
+	length(matchesSelectedState.filter(match => match === true));
 
-const selectedAllMatches = matchesSelectedState => {
+export const selectedAllMatches = matchesSelectedState => {
 	return getTotalSelectedMatches(matchesSelectedState) === length(matchesSelectedState);
 };
 
