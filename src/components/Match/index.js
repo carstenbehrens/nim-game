@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const SingleMatchContainer = styled.div`
+const MatchContainer = styled.div`
 	height: 8rem;
 	width: 4rem;
 	cursor: pointer;
@@ -36,9 +36,9 @@ const MatchTip = styled.div`
 
 export default ({ visible, matchNumber, onClick }) => {
 	return (
-		<SingleMatchContainer onClick={() => onClick(matchNumber)}>
+		<MatchContainer onClick={() => onClick(matchNumber)}>
       <MatchTip visible={visible} />
 			<MatchBottom visible={visible} /> 
-    </SingleMatchContainer>
+    </MatchContainer>
 	);
 };
