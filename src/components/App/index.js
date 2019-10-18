@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { GameContainer, MatchesContainer, GlobalStyle } from './style'
+import { GameContainer, MatchesContainer, GlobalStyle } from './style';
 import Match from '../Match';
 import Hud from '../Hud';
-import { isLegalMove, isGameOver, getInitialState } from '../../utils';
+import {
+	isLegalMove,
+	isGameOver,
+	getInitialState,
+	getRandomIntInclusive,
+  selectNumberOfMatches,
+  getMaxNumberToSelect
+} from '../../utils';
 
 // 13 Matches are available at the beginning of the game
 const initialMatchesSelectedArray = getInitialState();
@@ -18,9 +25,21 @@ const App = () => {
 			alert(`Game Over! ${userIsCurrentPlayer ? 'Computer' : 'User'} Won`);
 			// Restart Game
 			setMatchesState(getInitialState());
-		}
-	}, [matchesSelectedState, userIsCurrentPlayer]);
+    }
 
+    // The computers turn
+    if (!userIsCurrentPlayer) {
+      const max = getMaxNumberToSelect(matchesSelectedState)
+      const newArr = selectNumberOfMatches(getRandomIntInclusive(1, max), matchesSelectedState)
+      setMatchesState(() => [...newArr])
+    }
+    
+    // Finish the turn if computer has selected matches
+    if (!userIsCurrentPlayer && matchesSelectedState.includes(true)) {
+      handleFinishTurn(matchesSelectedState)
+    }
+	}, [matchesSelectedState, userIsCurrentPlayer]);
+  
 	const handleMatchesState = matchNumber => {
 		setMatchesState(matchesSelectedState => {
 			// Select and deselect the matches
