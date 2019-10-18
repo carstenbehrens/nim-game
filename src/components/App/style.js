@@ -58,7 +58,8 @@ export const GameContainer = styled.div`
 	background: #1b2d2a;
 	display: flex;
 	align-items: center;
-	flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const MatchesContainer = styled.div`
@@ -72,5 +73,9 @@ export const MatchesContainer = styled.div`
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		place-items: center;
-	}
+  }
+  
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;

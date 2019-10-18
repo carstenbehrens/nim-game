@@ -15,7 +15,11 @@ const MatchContainer = styled.div`
     &:hover {
       background: #335751;
     }
-	}
+  }
+  
+  @media (max-width: 600px) {
+    height: 90%;
+  }
 `;
 
 const MatchBottom = styled.div`

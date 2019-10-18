@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HudContainer = styled.div`
-	height: 30%;
+  height: 20%;
 	width: 100%;
 	color: white;
 	font-size: 2rem;
