@@ -18,17 +18,17 @@ const App = () => {
 	const [matchesSelectedState, setMatchesState] = useState(
 		initialMatchesSelectedArray
 	);
-	const [userIsCurrentPlayer, setUserIsCurrentPlayer] = useState(true);
+  const [userIsCurrentPlayer, setUserIsCurrentPlayer] = useState(true);
+  const [isWaiting, setIsWaiting] = useState(false);
 
 	useEffect(() => {
 		if (isGameOver(matchesSelectedState)) {
 			// Restart Game
 			alert(`Game Over! ${userIsCurrentPlayer ? 'Computer' : 'User'} Won`);
-      setMatchesState(() => [...getInitialState()]);
-      setUserIsCurrentPlayer(true);
+      resetGame()
 		} else {
-			// The computers turn
-			if (!userIsCurrentPlayer) {
+			// The computers turn, only select elements if we are not currently waiting for the move to finish
+			if (!userIsCurrentPlayer && !isWaiting) {
 				const max = getMaxNumberToSelect(matchesSelectedState);
 				const newArr = selectNumberOfMatches(
 					getRandomIntInclusive(1, max),
@@ -39,17 +39,30 @@ const App = () => {
 
 			// Finish the turn if computer has selected matches
 			if (!userIsCurrentPlayer && matchesSelectedState.includes(true)) {
-				handleFinishTurn(matchesSelectedState);
+        setIsWaiting(true)
+        if (isWaiting) {
+          setTimeout(() => {
+            handleFinishTurn(matchesSelectedState);
+            setIsWaiting(false)
+          }, 1000);
+        }
 			}
 		}
-	}, [matchesSelectedState, userIsCurrentPlayer]);
+  }, [isWaiting, matchesSelectedState, userIsCurrentPlayer]);
+  
+  const resetGame = () => {
+    setMatchesState(() => [...getInitialState()]);
+    setUserIsCurrentPlayer(true);
+  }
 
 	const handleClickMatch = matchNumber => {
-		setMatchesState(matchesSelectedState => {
-			// Select and deselect the matches
-			matchesSelectedState[matchNumber] = !matchesSelectedState[matchNumber];
-			return [...matchesSelectedState];
-		});
+    if (userIsCurrentPlayer) {
+      setMatchesState(matchesSelectedState => {
+        // Select and deselect the matches
+        matchesSelectedState[matchNumber] = !matchesSelectedState[matchNumber];
+        return [...matchesSelectedState];
+      });
+    }
 	};
 
 	const handleFinishTurn = matchesSelectedState => {
@@ -78,12 +91,12 @@ const App = () => {
 						visible={!el}
 						key={i}
 						matchNumber={i}
-						onClick={handleClickMatch}
+            onClick={handleClickMatch}
 					/>
 				))}
 			</MatchesContainer>
 			<Hud
-				handleFinishTurn={handleFinishTurn}
+				handleFinishTurn={userIsCurrentPlayer ? handleFinishTurn : () => null}
 				userIsCurrentPlayer={userIsCurrentPlayer}
 				matchesSelectedState={matchesSelectedState}
 			/>
