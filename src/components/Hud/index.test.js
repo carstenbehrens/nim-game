@@ -1,15 +1,15 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json'
-import App from './index';
+import Hud from './index';
 
-describe('App', () => {
+describe('Hud', () => {
   it('renders without crashing', () => {
-    shallow(<App />);
+    shallow(<Hud />);
   });
 
   it('matches snapshot', () => {
-    const wrapper = mount(<App />)
+    const wrapper = mount(<Hud userIsCurrentPlayer={true}/>)
     expect(toJson(wrapper)).toMatchSnapshot()
   });
 })
