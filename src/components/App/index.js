@@ -29,9 +29,8 @@ const App = () => {
 		} else {
 			// The computers turn, only select elements if we are not currently waiting for the move to finish
 			if (!userIsCurrentPlayer && !isWaiting) {
-				const max = getMaxNumberToSelect(matchesSelectedState);
 				const newArr = selectNumberOfMatches(
-					getRandomIntInclusive(1, max),
+					getRandomIntInclusive(1, getMaxNumberToSelect(matchesSelectedState)),
 					matchesSelectedState
 				);
 				setMatchesState(() => [...newArr]);
