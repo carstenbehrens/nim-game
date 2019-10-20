@@ -27,7 +27,8 @@ const App = () => {
 			alert(`Game Over! ${userIsCurrentPlayer ? 'Computer' : 'User'} Won`);
       resetGame()
 		} else {
-			// The computers turn, only select elements if we are not currently waiting for the move to finish
+			// The computers turn, only select elements if 
+			// we are not currently waiting for the move to finish
 			if (!userIsCurrentPlayer && !isWaiting) {
 				const newArr = selectNumberOfMatches(
 					getRandomIntInclusive(1, getMaxNumberToSelect(matchesSelectedState)),
@@ -65,7 +66,6 @@ const App = () => {
 	};
 
 	const handleFinishTurn = matchesSelectedState => {
-		if (!isGameOver(matchesSelectedState)) {
 			if (isLegalMove(matchesSelectedState)) {
 				// Removes the matches that were selected from the game
 				setMatchesState(matchesSelectedState =>
@@ -74,11 +74,10 @@ const App = () => {
 				// Change Players
 				setUserIsCurrentPlayer(userIsCurrentPlayer => !userIsCurrentPlayer);
 			}
-
+		
 			if (!isLegalMove(matchesSelectedState)) {
 				alert('Please select more then 1 and less then 3 matches');
 			}
-		}
 	};
 
 	return (
@@ -90,7 +89,7 @@ const App = () => {
 						visible={!el}
 						key={i}
 						matchNumber={i}
-            onClick={handleClickMatch}
+            onClick={userIsCurrentPlayer ? handleClickMatch : () => null}
 					/>
 				))}
 			</MatchesContainer>
