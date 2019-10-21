@@ -1,3 +1,8 @@
+/**
+ * Checks if the current move (selected matches) is legal
+ * @param {Array} matchesSelectedState
+ * @returns {Boolean} - True if legal
+ */
 export const isLegalMove = matchesSelectedState => {
 	const totalSelectedMatches = getTotalSelectedMatches(matchesSelectedState);
 	return (
@@ -7,9 +12,19 @@ export const isLegalMove = matchesSelectedState => {
 	);
 };
 
+/**
+ * Get the total amount of matches that are selected
+ * @param {Array} matchesSelectedState
+ * @returns {Number} - Number of selected elements
+ */
 export const getTotalSelectedMatches = matchesSelectedState =>
 	matchesSelectedState.filter(match => match === true).length;
 
+/**
+ * Checks if all matches are selected
+ * @param {Array} matchesSelectedState
+ * @returns {Boolean} - Returns true if all matches are selected
+ */
 export const selectedAllMatches = matchesSelectedState => {
 	return (
 		getTotalSelectedMatches(matchesSelectedState) ===
@@ -17,10 +32,21 @@ export const selectedAllMatches = matchesSelectedState => {
 	);
 };
 
+/**
+ * Checks if the game is over - (When only one match is left)
+ * @param {Array} matchesState
+ * @return {Boolean} - Returns true if the game is over
+ */
 export const isGameOver = matchesState => {
 	return matchesState.length <= 1;
 };
 
+/**
+ * Selects the matches (false -> true) so that they can be removed later
+ * @param {Number} number
+ * @param {Array} arr
+ * @returns {Array} - The new array
+ */
 export const selectNumberOfMatches = (number, arr) => {
 	for (let i = 0; i < number; i++) {
 		arr[i] = !arr[i];
@@ -28,11 +54,20 @@ export const selectNumberOfMatches = (number, arr) => {
 	return arr;
 };
 
+/**
+ * Returns the max number of matches that can be selected
+ * @param {Array} matchesSelectedState
+ * @returns {Number} - max number that can be selected
+ */
 export const getMaxNumberToSelect = matchesSelectedState => {
 	const length = matchesSelectedState.length;
 	return length <= 3 ? length - 1 : 3;
 };
 
+/**
+ * Gets the initial state
+ * @returns {Array} - Array with 13 entries
+ */
 export const getInitialState = () => [
 	false,
 	false,
@@ -49,6 +84,11 @@ export const getInitialState = () => [
 	false
 ];
 
+/**
+ * Returns the number of matches that the computer should remove
+ * @param {Number} numberOfMatches
+ * @returns {Number} - Numbers of matches to remove
+ */
 export const getBestMove = numberOfMatches => {
 	if (numberOfMatches === 2) {
 		return 1;
