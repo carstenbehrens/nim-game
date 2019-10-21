@@ -6,9 +6,8 @@ import {
 	isLegalMove,
 	isGameOver,
 	getInitialState,
-	getRandomIntInclusive,
 	selectNumberOfMatches,
-	getMaxNumberToSelect
+  getBestMove
 } from '../../utils';
 
 const gameStateReducer = (state, action) => {
@@ -24,7 +23,7 @@ const gameStateReducer = (state, action) => {
 		case 'REMOVE_SELECTED':
 			return {...state, matchesSelectedState: state.matchesSelectedState.filter(match => match === false)}
 		case 'SWITCH_IS_WAITING':
-			return {...state, isWaiting: action.status}
+			return {...state, isWaiting: !state.isWaiting}
 		case 'SET_IS_GAME_OVER':
 			return {...state, isGameOver: true}
 		case 'RESET_GAME':
@@ -51,18 +50,18 @@ const App = () => {
 		} else {
 			if (!state.isPlayer && !state.matchesSelectedState.includes(true) && !state.isWaiting) {
 				const newMatchSelectedState = selectNumberOfMatches(
-					getRandomIntInclusive(1, getMaxNumberToSelect(state.matchesSelectedState)),
+					getBestMove(state.matchesSelectedState.length),
 					state.matchesSelectedState
 				);
 				dispatch({type: 'SET_MATCHES', newMatchSelectedState})
-				dispatch({type: 'SWITCH_IS_WAITING', status: true})
+				dispatch({type: 'SWITCH_IS_WAITING'})
 			}
 
 			// Wait for 1 second before removing the matches for better UX
 			if (!state.isPlayer && !state.isWaiting) {
 				setTimeout(() => {
 					handleFinishTurn(state.matchesSelectedState);
-					dispatch({type: 'SWITCH_IS_WAITING', status: false})
+					dispatch({type: 'SWITCH_IS_WAITING'})
 				}, 1000);
 			}
 		}

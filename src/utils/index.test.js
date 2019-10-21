@@ -2,7 +2,6 @@ import {
 	isLegalMove,
 	isGameOver,
 	getTotalSelectedMatches,
-	getRandomIntInclusive,
 	selectNumberOfMatches,
   getMaxNumberToSelect,
   getBestMove
@@ -34,12 +33,6 @@ describe('check if game is over', () => {
 	test('four matches left, game is still going', () => {
 		expect(isGameOver([false, false, false, false])).toBe(false);
 	});
-});
-
-test('return number between 1 - 3', () => {
-	const number = getRandomIntInclusive(1, 3);
-	const isWithinRange = number >= 1 && number <= 3;
-	expect(isWithinRange).toBe(true);
 });
 
 test('should select a number of matches', () => {
