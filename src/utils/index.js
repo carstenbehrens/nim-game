@@ -66,23 +66,16 @@ export const getMaxNumberToSelect = matchesSelectedState => {
 
 /**
  * Gets the initial state
- * @returns {Array} - Array with 13 entries
+ * @param {Number} total number of entries
+ * @returns {Array} - Array with initial entries
  */
-export const getInitialState = () => [
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false
-];
+export const getInitialState = (total = 13) => {
+  let initialArray = []
+  for (let i = 0; i < total; i++) {
+    initialArray.push(false)
+  }
+  return initialArray;
+}
 
 /**
  * Returns the number of matches that the computer should remove

@@ -4,7 +4,8 @@ import {
 	getTotalSelectedMatches,
 	selectNumberOfMatches,
   getMaxNumberToSelect,
-  getBestMove
+  getBestMove,
+  getInitialState
 } from './index';
 
 describe('check if move is legal', () => {
@@ -43,6 +44,10 @@ test('should select a number of matches', () => {
 		false
 	]);
 });
+
+test('return an array with the initial state', () => {
+  expect(getInitialState(4)).toStrictEqual([false, false, false, false])
+})
 
 describe('get the max number of matches that can be selected', () => {
 	test('Only one match can be selected if two are left', () => {
