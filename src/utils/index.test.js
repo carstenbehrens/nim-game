@@ -4,7 +4,8 @@ import {
 	getTotalSelectedMatches,
 	getRandomIntInclusive,
 	selectNumberOfMatches,
-	getMaxNumberToSelect
+  getMaxNumberToSelect,
+  getBestMove
 } from './index';
 
 describe('check if move is legal', () => {
@@ -63,3 +64,13 @@ describe('get the max number of matches that can be selected', () => {
 		expect(getMaxNumberToSelect([false, false, false, false, false, false])).toBe(3);
 	});
 });
+
+describe('get the best possible move', () => {
+  test('Only one match should be selected if two are left', () => {
+    expect(getBestMove(2)).toBe(1)
+  })
+
+  test('Remove enough matches to leave one', () => {
+    expect(getBestMove(4)).toBe(3)
+  })
+})
