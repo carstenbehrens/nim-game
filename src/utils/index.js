@@ -14,7 +14,7 @@ export const selectedAllMatches = matchesSelectedState => {
 	return getTotalSelectedMatches(matchesSelectedState) === matchesSelectedState.length;
 };
 
-export const isGameOver = matchesState => {
+export const isGameOver = (matchesState) => {
 	return matchesState.length <= 1;
 };
 

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { GameContainer, MatchesContainer, GlobalStyle } from './style';
+import React, {useEffect, useReducer} from 'react';
+import {GameContainer, MatchesContainer, GlobalStyle} from './style';
 import Match from '../Match';
 import Hud from '../Hud';
 import {
@@ -11,92 +11,100 @@ import {
 	getMaxNumberToSelect
 } from '../../utils';
 
-// 13 Matches are available at the beginning of the game
-const initialMatchesSelectedArray = getInitialState();
+const gameStateReducer = (state, action) => {
+	switch (action.type) {
+		case 'SWITCH_PLAYER':
+			return {...state, isPlayer: !state.isPlayer};
+		case 'SELECT_MATCH':
+			const tmp = state.matchesSelectedState;
+			tmp[action.matchNumber] = !tmp[action.matchNumber];
+			return {...state, matchesSelectedState: tmp};
+		case 'SET_MATCHES':
+			return {...state, matchesSelectedState: action.newMatchSelectedState}
+		case 'REMOVE_SELECTED':
+			return {...state, matchesSelectedState: state.matchesSelectedState.filter(match => match === false)}
+		case 'SWITCH_IS_WAITING':
+			return {...state, isWaiting: action.status}
+		case 'SET_IS_GAME_OVER':
+			return {...state, isGameOver: true}
+		case 'RESET_GAME':
+			return {isPlayer: !state.isPlayer, matchesSelectedState: [...getInitialState()], isWaiting: false}
+		default:
+			throw new Error();
+	}
+};
 
 const App = () => {
-	const [matchesSelectedState, setMatchesState] = useState(
-		initialMatchesSelectedArray
-	);
-  const [userIsCurrentPlayer, setUserIsCurrentPlayer] = useState(true);
-  const [isWaiting, setIsWaiting] = useState(false);
+	const [state, dispatch] =
+		useReducer(gameStateReducer,
+			{
+				isPlayer: true,
+				matchesSelectedState: getInitialState(),
+				isWaiting: false,
+				isGameOver: false
+			});
 
 	useEffect(() => {
-		if (isGameOver(matchesSelectedState)) {
-			// Restart Game
-			alert(`Game Over! ${userIsCurrentPlayer ? 'Computer' : 'User'} Won`);
-      resetGame()
+		// Computer move -> Select Matches
+		if (isGameOver(state.matchesSelectedState, state.isPlayer)) {
+			dispatch({type: 'SET_IS_GAME_OVER'})
 		} else {
-			// The computers turn, only select elements if 
-			// we are not currently waiting for the move to finish
-			if (!userIsCurrentPlayer && !isWaiting) {
-				const newArr = selectNumberOfMatches(
-					getRandomIntInclusive(1, getMaxNumberToSelect(matchesSelectedState)),
-					matchesSelectedState
+			if (!state.isPlayer && !state.matchesSelectedState.includes(true) && !state.isWaiting) {
+				const newMatchSelectedState = selectNumberOfMatches(
+					getRandomIntInclusive(1, getMaxNumberToSelect(state.matchesSelectedState)),
+					state.matchesSelectedState
 				);
-				setMatchesState(() => [...newArr]);
+				dispatch({type: 'SET_MATCHES', newMatchSelectedState})
+				dispatch({type: 'SWITCH_IS_WAITING', status: true})
 			}
 
-			// Finish the turn if computer has selected matches
-			if (!userIsCurrentPlayer && matchesSelectedState.includes(true)) {
-        setIsWaiting(true)
-        if (isWaiting) {
-          setTimeout(() => {
-            handleFinishTurn(matchesSelectedState);
-            setIsWaiting(false)
-          }, 1000);
-        }
+			// Wait for 1 second before removing the matches for better UX
+			if (!state.isPlayer && !state.isWaiting) {
+				setTimeout(() => {
+					handleFinishTurn(state.matchesSelectedState);
+					dispatch({type: 'SWITCH_IS_WAITING', status: false})
+				}, 1000);
 			}
 		}
-  }, [isWaiting, matchesSelectedState, userIsCurrentPlayer]);
-  
-  const resetGame = () => {
-    setMatchesState(() => [...getInitialState()]);
-    setUserIsCurrentPlayer(true);
-  }
+	}, [state.isPlayer, state.isWaiting, state.matchesSelectedState])
+
+	useEffect(() => {
+		if (state.isGameOver) {
+			alert(`GAME OVER: ${state.isPlayer ? 'Computer' : 'Player'} Won.`)
+			dispatch({type: 'RESET_GAME'})
+		}
+	}, [state.isGameOver, state.isPlayer])
 
 	const handleClickMatch = matchNumber => {
-    if (userIsCurrentPlayer) {
-      setMatchesState(matchesSelectedState => {
-        // Select and deselect the matches
-        matchesSelectedState[matchNumber] = !matchesSelectedState[matchNumber];
-        return [...matchesSelectedState];
-      });
-    }
+		dispatch({type: 'SELECT_MATCH', matchNumber})
 	};
 
 	const handleFinishTurn = matchesSelectedState => {
-			if (isLegalMove(matchesSelectedState)) {
-				// Removes the matches that were selected from the game
-				setMatchesState(matchesSelectedState =>
-					matchesSelectedState.filter(match => match === false)
-				);
-				// Change Players
-				setUserIsCurrentPlayer(userIsCurrentPlayer => !userIsCurrentPlayer);
-			}
-		
-			if (!isLegalMove(matchesSelectedState)) {
-				alert('Please select more then 1 and less then 3 matches');
-			}
+		if (isLegalMove(matchesSelectedState)) {
+			dispatch({type: 'REMOVE_SELECTED'});
+			dispatch({type: 'SWITCH_PLAYER'});
+		} else {
+			alert('Please select more then 1 and less then 3 matches');
+		}
 	};
 
 	return (
 		<GameContainer>
 			<GlobalStyle />
 			<MatchesContainer>
-				{matchesSelectedState.map((el, i) => (
+				{state.matchesSelectedState.map((el, i) => (
 					<Match
 						visible={!el}
 						key={i}
 						matchNumber={i}
-            onClick={userIsCurrentPlayer ? handleClickMatch : () => null}
+						onClick={handleClickMatch}
 					/>
 				))}
 			</MatchesContainer>
 			<Hud
-				handleFinishTurn={userIsCurrentPlayer ? handleFinishTurn : () => null}
-				userIsCurrentPlayer={userIsCurrentPlayer}
-				matchesSelectedState={matchesSelectedState}
+				handleFinishTurn={handleFinishTurn}
+				userIsCurrentPlayer={state.isPlayer}
+				matchesSelectedState={state.matchesSelectedState}
 			/>
 		</GameContainer>
 	);
