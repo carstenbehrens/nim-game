@@ -9,11 +9,12 @@ const MatchContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #243d39;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.1) 100%);
+  border-radius: 3rem;
 
   @media (min-width: 900px) {
     &:hover {
-      background: #335751;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.3) 100%);
     }
   }
   
@@ -22,18 +23,21 @@ const MatchContainer = styled.div`
   }
 `;
 
-const MatchBottom = styled.div`
+const MatchStick = styled.div`
 	height: 5rem;
-	width: 1rem;
-	background: #915535;
+	width: 0.6rem;
+	background: rgb(224,175,76);
+  background: linear-gradient(270deg, rgba(224,175,76,1) 0%, rgba(224,175,76,1) 50%, rgba(230,186,102,1) 50%, rgba(237,201,136,1) 100%);
   cursor: pointer;
   opacity: ${props => props.visible ? '100' : '0'};
 `;
 
 const MatchTip = styled.div`
-  height: 1rem;
+  height: 1.4rem;
   width: 1rem;
-  background: red;
+  border-radius: 40%;
+  background: rgb(89,21,12);
+  background: linear-gradient(126deg, rgba(89,21,12,1) 0%, rgba(238,141,101,1) 0%, rgba(193,104,66,1) 37%, rgba(213,49,28,1) 39%, rgba(71,19,12,1) 100%);
   opacity: ${props => props.visible ? '100' : '0'};
 `
 
@@ -42,7 +46,7 @@ export default ({ visible, matchNumber, onClick }) => {
 	return (
 		<MatchContainer onClick={() => onClick(matchNumber)}>
       <MatchTip visible={visible} />
-			<MatchBottom visible={visible} /> 
+			<MatchStick visible={visible} /> 
     </MatchContainer>
 	);
 };
