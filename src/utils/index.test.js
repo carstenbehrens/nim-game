@@ -70,5 +70,9 @@ describe('get the best possible move', () => {
 
   test('Remove enough matches to leave one', () => {
     expect(getBestMove(4)).toBe(3)
-  })
+	})
+	
+	test('If three matches are left, take two', () => {
+		expect(getBestMove(3)).toBe(2)
+	})
 })

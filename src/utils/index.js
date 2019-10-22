@@ -86,6 +86,10 @@ export const getBestMove = numberOfMatches => {
 	if (numberOfMatches === 2) {
 		return 1;
 	}
+
+	if (numberOfMatches === 3) {
+		return 2;
+	}
 	// If the remainder of numberOfMatches % 4 is 1 we return 3 so the next number is even again
 	// If the remainder of numberOfMatches % 4 is 0 we return 2 so the next number is even again
 	return !!numberOfMatches % 4 ? 3 : 2;
