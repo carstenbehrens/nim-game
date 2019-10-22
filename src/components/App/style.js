@@ -79,4 +79,8 @@ export const MatchesContainer = styled.div`
   @media (max-width: 600px) {
     width: 100%;
   }
+
+  @media (max-width: 400px) {
+    grid-template-columns: repeat(4, 1fr); 
+  }
 `;
