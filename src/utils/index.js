@@ -1,44 +1,44 @@
 /**
  * Checks if the current move (selected matches) is legal
- * @param {Array} matchesSelectedState
+ * @param {Array} matches
  * @returns {Boolean} - True if legal
  */
-export const isLegalMove = matchesSelectedState => {
-	const totalSelectedMatches = getTotalSelectedMatches(matchesSelectedState);
+export const isLegalMove = matches => {
+	const totalSelectedMatches = getSelectedMatches(matches);
 	return (
 		totalSelectedMatches > 0 &&
 		totalSelectedMatches < 4 &&
-		!selectedAllMatches(matchesSelectedState)
+		!selectedAllMatches(matches)
 	);
 };
 
 /**
  * Get the total amount of matches that are selected
- * @param {Array} matchesSelectedState
+ * @param {Array} matches
  * @returns {Number} - Number of selected elements
  */
-export const getTotalSelectedMatches = matchesSelectedState =>
-	matchesSelectedState.filter(match => match === true).length;
+export const getSelectedMatches = matches =>
+	matches.filter(match => match === true).length;
 
 /**
  * Checks if all matches are selected
- * @param {Array} matchesSelectedState
+ * @param {Array} matches
  * @returns {Boolean} - Returns true if all matches are selected
  */
-export const selectedAllMatches = matchesSelectedState => {
+export const selectedAllMatches = matches => {
 	return (
-		getTotalSelectedMatches(matchesSelectedState) ===
-		matchesSelectedState.length
+		getSelectedMatches(matches) ===
+		matches.length
 	);
 };
 
 /**
  * Checks if the game is over - (When only one match is left)
- * @param {Array} matchesState
+ * @param {Array} matches
  * @return {Boolean} - Returns true if the game is over
  */
-export const isGameOver = matchesState => {
-	return matchesState.length <= 1;
+export const isGameOver = matches => {
+	return matches.length <= 1;
 };
 
 /**
@@ -47,7 +47,7 @@ export const isGameOver = matchesState => {
  * @param {Array} arr
  * @returns {Array} - The new array
  */
-export const selectNumberOfMatches = (number, arr) => {
+export const selectMatches = (number, arr) => {
 	for (let i = 0; i < number; i++) {
 		arr[i] = !arr[i];
 	}
@@ -56,11 +56,11 @@ export const selectNumberOfMatches = (number, arr) => {
 
 /**
  * Returns the max number of matches that can be selected
- * @param {Array} matchesSelectedState
+ * @param {Array} matches
  * @returns {Number} - max number that can be selected
  */
-export const getMaxNumberToSelect = matchesSelectedState => {
-	const length = matchesSelectedState.length;
+export const getMaxNumberToSelect = matches => {
+	const length = matches.length;
 	return length <= 3 ? length - 1 : 3;
 };
 

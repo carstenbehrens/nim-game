@@ -700,13 +700,1390 @@ exports[`App matches snapshot 1`] = `
                   </StyledComponent>
                 </styled.div>
               </_default>
+              <_default
+                key="4"
+                matchNumber={4}
+                onClick={[Function]}
+                visible={true}
+              >
+                <styled.div
+                  onClick={[Function]}
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-htpNat",
+                          "isStatic": false,
+                          "lastClassName": "PSgIe",
+                          "rules": Array [
+                            "
+	height: 8rem;
+	width: 4rem;
+	cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.1) 100%);
+  border-radius: 3rem;
+
+  @media (min-width: 900px) {
+    &:hover {
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.3) 100%);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    height: 90%;
+  }
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-htpNat",
+                        "target": "div",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="sc-htpNat PSgIe"
+                      onClick={[Function]}
+                    >
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-ifAKCX",
+                                "isStatic": false,
+                                "lastClassName": "fUoITb",
+                                "rules": Array [
+                                  "
+  height: 1.4rem;
+  width: 1rem;
+  border-radius: 40%;
+  background: rgb(89,21,12);
+  background: linear-gradient(126deg, rgba(89,21,12,1) 0%, rgba(238,141,101,1) 0%, rgba(193,104,66,1) 37%, rgba(213,49,28,1) 39%, rgba(71,19,12,1) 100%);
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-ifAKCX",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-ifAKCX fUoITb"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "bgyMHR",
+                                "rules": Array [
+                                  "
+	height: 5rem;
+	width: 0.6rem;
+	background: rgb(224,175,76);
+  background: linear-gradient(270deg, rgba(224,175,76,1) 0%, rgba(224,175,76,1) 50%, rgba(230,186,102,1) 50%, rgba(237,201,136,1) 100%);
+  cursor: pointer;
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-bxivhb bgyMHR"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+              </_default>
+              <_default
+                key="5"
+                matchNumber={5}
+                onClick={[Function]}
+                visible={true}
+              >
+                <styled.div
+                  onClick={[Function]}
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-htpNat",
+                          "isStatic": false,
+                          "lastClassName": "PSgIe",
+                          "rules": Array [
+                            "
+	height: 8rem;
+	width: 4rem;
+	cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.1) 100%);
+  border-radius: 3rem;
+
+  @media (min-width: 900px) {
+    &:hover {
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.3) 100%);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    height: 90%;
+  }
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-htpNat",
+                        "target": "div",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="sc-htpNat PSgIe"
+                      onClick={[Function]}
+                    >
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-ifAKCX",
+                                "isStatic": false,
+                                "lastClassName": "fUoITb",
+                                "rules": Array [
+                                  "
+  height: 1.4rem;
+  width: 1rem;
+  border-radius: 40%;
+  background: rgb(89,21,12);
+  background: linear-gradient(126deg, rgba(89,21,12,1) 0%, rgba(238,141,101,1) 0%, rgba(193,104,66,1) 37%, rgba(213,49,28,1) 39%, rgba(71,19,12,1) 100%);
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-ifAKCX",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-ifAKCX fUoITb"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "bgyMHR",
+                                "rules": Array [
+                                  "
+	height: 5rem;
+	width: 0.6rem;
+	background: rgb(224,175,76);
+  background: linear-gradient(270deg, rgba(224,175,76,1) 0%, rgba(224,175,76,1) 50%, rgba(230,186,102,1) 50%, rgba(237,201,136,1) 100%);
+  cursor: pointer;
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-bxivhb bgyMHR"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+              </_default>
+              <_default
+                key="6"
+                matchNumber={6}
+                onClick={[Function]}
+                visible={true}
+              >
+                <styled.div
+                  onClick={[Function]}
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-htpNat",
+                          "isStatic": false,
+                          "lastClassName": "PSgIe",
+                          "rules": Array [
+                            "
+	height: 8rem;
+	width: 4rem;
+	cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.1) 100%);
+  border-radius: 3rem;
+
+  @media (min-width: 900px) {
+    &:hover {
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.3) 100%);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    height: 90%;
+  }
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-htpNat",
+                        "target": "div",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="sc-htpNat PSgIe"
+                      onClick={[Function]}
+                    >
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-ifAKCX",
+                                "isStatic": false,
+                                "lastClassName": "fUoITb",
+                                "rules": Array [
+                                  "
+  height: 1.4rem;
+  width: 1rem;
+  border-radius: 40%;
+  background: rgb(89,21,12);
+  background: linear-gradient(126deg, rgba(89,21,12,1) 0%, rgba(238,141,101,1) 0%, rgba(193,104,66,1) 37%, rgba(213,49,28,1) 39%, rgba(71,19,12,1) 100%);
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-ifAKCX",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-ifAKCX fUoITb"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "bgyMHR",
+                                "rules": Array [
+                                  "
+	height: 5rem;
+	width: 0.6rem;
+	background: rgb(224,175,76);
+  background: linear-gradient(270deg, rgba(224,175,76,1) 0%, rgba(224,175,76,1) 50%, rgba(230,186,102,1) 50%, rgba(237,201,136,1) 100%);
+  cursor: pointer;
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-bxivhb bgyMHR"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+              </_default>
+              <_default
+                key="7"
+                matchNumber={7}
+                onClick={[Function]}
+                visible={true}
+              >
+                <styled.div
+                  onClick={[Function]}
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-htpNat",
+                          "isStatic": false,
+                          "lastClassName": "PSgIe",
+                          "rules": Array [
+                            "
+	height: 8rem;
+	width: 4rem;
+	cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.1) 100%);
+  border-radius: 3rem;
+
+  @media (min-width: 900px) {
+    &:hover {
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.3) 100%);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    height: 90%;
+  }
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-htpNat",
+                        "target": "div",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="sc-htpNat PSgIe"
+                      onClick={[Function]}
+                    >
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-ifAKCX",
+                                "isStatic": false,
+                                "lastClassName": "fUoITb",
+                                "rules": Array [
+                                  "
+  height: 1.4rem;
+  width: 1rem;
+  border-radius: 40%;
+  background: rgb(89,21,12);
+  background: linear-gradient(126deg, rgba(89,21,12,1) 0%, rgba(238,141,101,1) 0%, rgba(193,104,66,1) 37%, rgba(213,49,28,1) 39%, rgba(71,19,12,1) 100%);
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-ifAKCX",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-ifAKCX fUoITb"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "bgyMHR",
+                                "rules": Array [
+                                  "
+	height: 5rem;
+	width: 0.6rem;
+	background: rgb(224,175,76);
+  background: linear-gradient(270deg, rgba(224,175,76,1) 0%, rgba(224,175,76,1) 50%, rgba(230,186,102,1) 50%, rgba(237,201,136,1) 100%);
+  cursor: pointer;
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-bxivhb bgyMHR"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+              </_default>
+              <_default
+                key="8"
+                matchNumber={8}
+                onClick={[Function]}
+                visible={true}
+              >
+                <styled.div
+                  onClick={[Function]}
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-htpNat",
+                          "isStatic": false,
+                          "lastClassName": "PSgIe",
+                          "rules": Array [
+                            "
+	height: 8rem;
+	width: 4rem;
+	cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.1) 100%);
+  border-radius: 3rem;
+
+  @media (min-width: 900px) {
+    &:hover {
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.3) 100%);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    height: 90%;
+  }
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-htpNat",
+                        "target": "div",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="sc-htpNat PSgIe"
+                      onClick={[Function]}
+                    >
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-ifAKCX",
+                                "isStatic": false,
+                                "lastClassName": "fUoITb",
+                                "rules": Array [
+                                  "
+  height: 1.4rem;
+  width: 1rem;
+  border-radius: 40%;
+  background: rgb(89,21,12);
+  background: linear-gradient(126deg, rgba(89,21,12,1) 0%, rgba(238,141,101,1) 0%, rgba(193,104,66,1) 37%, rgba(213,49,28,1) 39%, rgba(71,19,12,1) 100%);
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-ifAKCX",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-ifAKCX fUoITb"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "bgyMHR",
+                                "rules": Array [
+                                  "
+	height: 5rem;
+	width: 0.6rem;
+	background: rgb(224,175,76);
+  background: linear-gradient(270deg, rgba(224,175,76,1) 0%, rgba(224,175,76,1) 50%, rgba(230,186,102,1) 50%, rgba(237,201,136,1) 100%);
+  cursor: pointer;
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-bxivhb bgyMHR"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+              </_default>
+              <_default
+                key="9"
+                matchNumber={9}
+                onClick={[Function]}
+                visible={true}
+              >
+                <styled.div
+                  onClick={[Function]}
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-htpNat",
+                          "isStatic": false,
+                          "lastClassName": "PSgIe",
+                          "rules": Array [
+                            "
+	height: 8rem;
+	width: 4rem;
+	cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.1) 100%);
+  border-radius: 3rem;
+
+  @media (min-width: 900px) {
+    &:hover {
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.3) 100%);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    height: 90%;
+  }
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-htpNat",
+                        "target": "div",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="sc-htpNat PSgIe"
+                      onClick={[Function]}
+                    >
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-ifAKCX",
+                                "isStatic": false,
+                                "lastClassName": "fUoITb",
+                                "rules": Array [
+                                  "
+  height: 1.4rem;
+  width: 1rem;
+  border-radius: 40%;
+  background: rgb(89,21,12);
+  background: linear-gradient(126deg, rgba(89,21,12,1) 0%, rgba(238,141,101,1) 0%, rgba(193,104,66,1) 37%, rgba(213,49,28,1) 39%, rgba(71,19,12,1) 100%);
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-ifAKCX",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-ifAKCX fUoITb"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "bgyMHR",
+                                "rules": Array [
+                                  "
+	height: 5rem;
+	width: 0.6rem;
+	background: rgb(224,175,76);
+  background: linear-gradient(270deg, rgba(224,175,76,1) 0%, rgba(224,175,76,1) 50%, rgba(230,186,102,1) 50%, rgba(237,201,136,1) 100%);
+  cursor: pointer;
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-bxivhb bgyMHR"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+              </_default>
+              <_default
+                key="10"
+                matchNumber={10}
+                onClick={[Function]}
+                visible={true}
+              >
+                <styled.div
+                  onClick={[Function]}
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-htpNat",
+                          "isStatic": false,
+                          "lastClassName": "PSgIe",
+                          "rules": Array [
+                            "
+	height: 8rem;
+	width: 4rem;
+	cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.1) 100%);
+  border-radius: 3rem;
+
+  @media (min-width: 900px) {
+    &:hover {
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.3) 100%);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    height: 90%;
+  }
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-htpNat",
+                        "target": "div",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="sc-htpNat PSgIe"
+                      onClick={[Function]}
+                    >
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-ifAKCX",
+                                "isStatic": false,
+                                "lastClassName": "fUoITb",
+                                "rules": Array [
+                                  "
+  height: 1.4rem;
+  width: 1rem;
+  border-radius: 40%;
+  background: rgb(89,21,12);
+  background: linear-gradient(126deg, rgba(89,21,12,1) 0%, rgba(238,141,101,1) 0%, rgba(193,104,66,1) 37%, rgba(213,49,28,1) 39%, rgba(71,19,12,1) 100%);
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-ifAKCX",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-ifAKCX fUoITb"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "bgyMHR",
+                                "rules": Array [
+                                  "
+	height: 5rem;
+	width: 0.6rem;
+	background: rgb(224,175,76);
+  background: linear-gradient(270deg, rgba(224,175,76,1) 0%, rgba(224,175,76,1) 50%, rgba(230,186,102,1) 50%, rgba(237,201,136,1) 100%);
+  cursor: pointer;
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-bxivhb bgyMHR"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+              </_default>
+              <_default
+                key="11"
+                matchNumber={11}
+                onClick={[Function]}
+                visible={true}
+              >
+                <styled.div
+                  onClick={[Function]}
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-htpNat",
+                          "isStatic": false,
+                          "lastClassName": "PSgIe",
+                          "rules": Array [
+                            "
+	height: 8rem;
+	width: 4rem;
+	cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.1) 100%);
+  border-radius: 3rem;
+
+  @media (min-width: 900px) {
+    &:hover {
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.3) 100%);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    height: 90%;
+  }
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-htpNat",
+                        "target": "div",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="sc-htpNat PSgIe"
+                      onClick={[Function]}
+                    >
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-ifAKCX",
+                                "isStatic": false,
+                                "lastClassName": "fUoITb",
+                                "rules": Array [
+                                  "
+  height: 1.4rem;
+  width: 1rem;
+  border-radius: 40%;
+  background: rgb(89,21,12);
+  background: linear-gradient(126deg, rgba(89,21,12,1) 0%, rgba(238,141,101,1) 0%, rgba(193,104,66,1) 37%, rgba(213,49,28,1) 39%, rgba(71,19,12,1) 100%);
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-ifAKCX",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-ifAKCX fUoITb"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "bgyMHR",
+                                "rules": Array [
+                                  "
+	height: 5rem;
+	width: 0.6rem;
+	background: rgb(224,175,76);
+  background: linear-gradient(270deg, rgba(224,175,76,1) 0%, rgba(224,175,76,1) 50%, rgba(230,186,102,1) 50%, rgba(237,201,136,1) 100%);
+  cursor: pointer;
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-bxivhb bgyMHR"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+              </_default>
+              <_default
+                key="12"
+                matchNumber={12}
+                onClick={[Function]}
+                visible={true}
+              >
+                <styled.div
+                  onClick={[Function]}
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-htpNat",
+                          "isStatic": false,
+                          "lastClassName": "PSgIe",
+                          "rules": Array [
+                            "
+	height: 8rem;
+	width: 4rem;
+	cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.1) 100%);
+  border-radius: 3rem;
+
+  @media (min-width: 900px) {
+    &:hover {
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.3) 100%);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    height: 90%;
+  }
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-htpNat",
+                        "target": "div",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="sc-htpNat PSgIe"
+                      onClick={[Function]}
+                    >
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-ifAKCX",
+                                "isStatic": false,
+                                "lastClassName": "fUoITb",
+                                "rules": Array [
+                                  "
+  height: 1.4rem;
+  width: 1rem;
+  border-radius: 40%;
+  background: rgb(89,21,12);
+  background: linear-gradient(126deg, rgba(89,21,12,1) 0%, rgba(238,141,101,1) 0%, rgba(193,104,66,1) 37%, rgba(213,49,28,1) 39%, rgba(71,19,12,1) 100%);
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-ifAKCX",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-ifAKCX fUoITb"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                      <styled.div
+                        visible={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "bgyMHR",
+                                "rules": Array [
+                                  "
+	height: 5rem;
+	width: 0.6rem;
+	background: rgb(224,175,76);
+  background: linear-gradient(270deg, rgba(224,175,76,1) 0%, rgba(224,175,76,1) 50%, rgba(230,186,102,1) 50%, rgba(237,201,136,1) 100%);
+  cursor: pointer;
+  opacity: ",
+                                  [Function],
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "div",
+                              "toString": [Function],
+                              "usesTheme": false,
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          visible={true}
+                        >
+                          <div
+                            className="sc-bxivhb bgyMHR"
+                          />
+                        </StyledComponent>
+                      </styled.div>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+              </_default>
             </div>
           </StyledComponent>
         </styled.div>
         <_default
           handleFinishTurn={[Function]}
-          matchesSelectedState={
+          matches={
             Array [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
               false,
               false,
               false,

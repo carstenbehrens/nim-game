@@ -1,8 +1,8 @@
 import {
 	isLegalMove,
 	isGameOver,
-	getTotalSelectedMatches,
-	selectNumberOfMatches,
+	getSelectedMatches,
+	selectMatches,
   getMaxNumberToSelect,
   getBestMove,
   getInitialState
@@ -22,7 +22,7 @@ describe('check if move is legal', () => {
 	});
 
 	test('return sum of selected matches', () => {
-		expect(getTotalSelectedMatches([true, true])).toBe(2);
+		expect(getSelectedMatches([true, true])).toBe(2);
 	});
 });
 
@@ -37,7 +37,7 @@ describe('check if game is over', () => {
 });
 
 test('should select a number of matches', () => {
-	expect(selectNumberOfMatches(3, [false, false, false, false])).toMatchObject([
+	expect(selectMatches(3, [false, false, false, false])).toMatchObject([
 		true,
 		true,
 		true,

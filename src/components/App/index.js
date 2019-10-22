@@ -6,7 +6,7 @@ import {
 	isLegalMove,
 	isGameOver,
 	getInitialState,
-	selectNumberOfMatches,
+	selectMatches,
   getBestMove
 } from '../../utils';
 
@@ -15,19 +15,19 @@ const gameStateReducer = (state, action) => {
 		case 'SWITCH_PLAYER':
 			return {...state, isPlayer: !state.isPlayer};
 		case 'SELECT_MATCH':
-			const tmp = state.matchesSelectedState;
+			const tmp = state.matches;
 			tmp[action.matchNumber] = !tmp[action.matchNumber];
-			return {...state, matchesSelectedState: tmp};
+			return {...state, matches: tmp};
 		case 'SET_MATCHES':
-			return {...state, matchesSelectedState: action.newMatchSelectedState}
+			return {...state, matches: action.newMatchSelectedState}
 		case 'REMOVE_SELECTED':
-			return {...state, matchesSelectedState: state.matchesSelectedState.filter(match => match === false)}
+			return {...state, matches: state.matches.filter(match => match === false)}
 		case 'SWITCH_IS_WAITING':
 			return {...state, isWaiting: !state.isWaiting}
 		case 'SET_IS_GAME_OVER':
 			return {...state, isGameOver: true}
 		case 'RESET_GAME':
-			return {isPlayer: !state.isPlayer, matchesSelectedState: [...getInitialState()], isWaiting: false}
+			return {isPlayer: !state.isPlayer, matches: [...getInitialState()], isWaiting: false}
 		default:
 			throw new Error();
 	}
@@ -38,20 +38,20 @@ const App = () => {
 		useReducer(gameStateReducer,
 			{
 				isPlayer: true,
-				matchesSelectedState: getInitialState(),
+				matches: getInitialState(),
 				isWaiting: false,
 				isGameOver: false
 			});
 
 	useEffect(() => {
 		// Computer move -> Select Matches
-		if (isGameOver(state.matchesSelectedState, state.isPlayer)) {
+		if (isGameOver(state.matches, state.isPlayer)) {
 			dispatch({type: 'SET_IS_GAME_OVER'})
 		} else {
-			if (!state.isPlayer && !state.matchesSelectedState.includes(true) && !state.isWaiting) {
-				const newMatchSelectedState = selectNumberOfMatches(
-					getBestMove(state.matchesSelectedState.length),
-					state.matchesSelectedState
+			if (!state.isPlayer && !state.matches.includes(true) && !state.isWaiting) {
+				const newMatchSelectedState = selectMatches(
+					getBestMove(state.matches.length),
+					state.matches
 				);
 				dispatch({type: 'SET_MATCHES', newMatchSelectedState})
 				dispatch({type: 'SWITCH_IS_WAITING'})
@@ -60,12 +60,12 @@ const App = () => {
 			// Wait for 1 second before removing the matches for better UX
 			if (!state.isPlayer && !state.isWaiting) {
 				setTimeout(() => {
-					handleFinishTurn(state.matchesSelectedState);
+					handleFinishTurn(state.matches);
 					dispatch({type: 'SWITCH_IS_WAITING'})
 				}, 1000);
 			}
 		}
-	}, [state.isPlayer, state.isWaiting, state.matchesSelectedState])
+	}, [state.isPlayer, state.isWaiting, state.matches])
 
 	useEffect(() => {
 		if (state.isGameOver) {
@@ -78,8 +78,8 @@ const App = () => {
 		dispatch({type: 'SELECT_MATCH', matchNumber})
 	};
 
-	const handleFinishTurn = matchesSelectedState => {
-		if (isLegalMove(matchesSelectedState)) {
+	const handleFinishTurn = matches => {
+		if (isLegalMove(matches)) {
 			dispatch({type: 'REMOVE_SELECTED'});
 			dispatch({type: 'SWITCH_PLAYER'});
 		} else {
@@ -91,7 +91,7 @@ const App = () => {
 		<GameContainer>
 			<GlobalStyle />
 			<MatchesContainer>
-				{state.matchesSelectedState.map((el, i) => (
+				{state.matches.map((el, i) => (
 					<Match
 						visible={!el}
 						key={i}
@@ -103,7 +103,7 @@ const App = () => {
 			<Hud
 				handleFinishTurn={handleFinishTurn}
 				userIsCurrentPlayer={state.isPlayer}
-				matchesSelectedState={state.matchesSelectedState}
+				matches={state.matches}
 			/>
 		</GameContainer>
 	);
