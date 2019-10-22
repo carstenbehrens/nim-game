@@ -42,9 +42,9 @@ const MatchTip = styled.div`
 `
 
 
-export default ({ visible, matchNumber, onClick }) => {
+export default ({ visible, number, onClick }) => {
 	return (
-		<MatchContainer onClick={() => onClick(matchNumber)}>
+		<MatchContainer onClick={() => onClick(number)}>
       <MatchTip visible={visible} />
 			<MatchStick visible={visible} /> 
     </MatchContainer>

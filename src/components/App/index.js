@@ -45,7 +45,7 @@ const App = () => {
 
 	useEffect(() => {
 		// Computer move -> Select Matches
-		if (isGameOver(state.matches, state.isPlayer)) {
+		if (isGameOver(state.matches)) {
 			dispatch({type: 'SET_IS_GAME_OVER'})
 		} else {
 			if (!state.isPlayer && !state.matches.includes(true) && !state.isWaiting) {
@@ -75,6 +75,7 @@ const App = () => {
 	}, [state.isGameOver, state.isPlayer])
 
 	const handleClickMatch = number => {
+    console.log(number)
 		dispatch({type: 'SELECT_MATCH', number})
 	};
 
