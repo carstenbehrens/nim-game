@@ -94,7 +94,7 @@ exports[`App matches snapshot 1`] = `
             >
               <_default
                 key="0"
-                matchNumber={0}
+                number={0}
                 onClick={[Function]}
                 visible={true}
               >
@@ -246,7 +246,7 @@ exports[`App matches snapshot 1`] = `
               </_default>
               <_default
                 key="1"
-                matchNumber={1}
+                number={1}
                 onClick={[Function]}
                 visible={true}
               >
@@ -398,7 +398,7 @@ exports[`App matches snapshot 1`] = `
               </_default>
               <_default
                 key="2"
-                matchNumber={2}
+                number={2}
                 onClick={[Function]}
                 visible={true}
               >
@@ -550,7 +550,7 @@ exports[`App matches snapshot 1`] = `
               </_default>
               <_default
                 key="3"
-                matchNumber={3}
+                number={3}
                 onClick={[Function]}
                 visible={true}
               >
@@ -702,7 +702,7 @@ exports[`App matches snapshot 1`] = `
               </_default>
               <_default
                 key="4"
-                matchNumber={4}
+                number={4}
                 onClick={[Function]}
                 visible={true}
               >
@@ -854,7 +854,7 @@ exports[`App matches snapshot 1`] = `
               </_default>
               <_default
                 key="5"
-                matchNumber={5}
+                number={5}
                 onClick={[Function]}
                 visible={true}
               >
@@ -1006,7 +1006,7 @@ exports[`App matches snapshot 1`] = `
               </_default>
               <_default
                 key="6"
-                matchNumber={6}
+                number={6}
                 onClick={[Function]}
                 visible={true}
               >
@@ -1158,7 +1158,7 @@ exports[`App matches snapshot 1`] = `
               </_default>
               <_default
                 key="7"
-                matchNumber={7}
+                number={7}
                 onClick={[Function]}
                 visible={true}
               >
@@ -1310,7 +1310,7 @@ exports[`App matches snapshot 1`] = `
               </_default>
               <_default
                 key="8"
-                matchNumber={8}
+                number={8}
                 onClick={[Function]}
                 visible={true}
               >
@@ -1462,7 +1462,7 @@ exports[`App matches snapshot 1`] = `
               </_default>
               <_default
                 key="9"
-                matchNumber={9}
+                number={9}
                 onClick={[Function]}
                 visible={true}
               >
@@ -1614,7 +1614,7 @@ exports[`App matches snapshot 1`] = `
               </_default>
               <_default
                 key="10"
-                matchNumber={10}
+                number={10}
                 onClick={[Function]}
                 visible={true}
               >
@@ -1766,7 +1766,7 @@ exports[`App matches snapshot 1`] = `
               </_default>
               <_default
                 key="11"
-                matchNumber={11}
+                number={11}
                 onClick={[Function]}
                 visible={true}
               >
@@ -1918,7 +1918,7 @@ exports[`App matches snapshot 1`] = `
               </_default>
               <_default
                 key="12"
-                matchNumber={12}
+                number={12}
                 onClick={[Function]}
                 visible={true}
               >

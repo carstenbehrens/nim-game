@@ -10,16 +10,16 @@ import {
   getBestMove
 } from '../../utils';
 
-const gameStateReducer = (state, action) => {
+export const reducer = (state, action) => {
 	switch (action.type) {
 		case 'SWITCH_PLAYER':
 			return {...state, isPlayer: !state.isPlayer};
 		case 'SELECT_MATCH':
 			const tmp = state.matches;
-			tmp[action.matchNumber] = !tmp[action.matchNumber];
+			tmp[action.number] = !tmp[action.number];
 			return {...state, matches: tmp};
 		case 'SET_MATCHES':
-			return {...state, matches: action.newMatchSelectedState}
+			return {...state, matches: action.newMatchesState}
 		case 'REMOVE_SELECTED':
 			return {...state, matches: state.matches.filter(match => match === false)}
 		case 'SWITCH_IS_WAITING':
@@ -27,7 +27,7 @@ const gameStateReducer = (state, action) => {
 		case 'SET_IS_GAME_OVER':
 			return {...state, isGameOver: true}
 		case 'RESET_GAME':
-			return {isPlayer: !state.isPlayer, matches: [...getInitialState()], isWaiting: false}
+			return {isPlayer: !state.isPlayer, matches: [...getInitialState()], isWaiting: false, isGameOver: false}
 		default:
 			throw new Error();
 	}
@@ -35,7 +35,7 @@ const gameStateReducer = (state, action) => {
 
 const App = () => {
 	const [state, dispatch] =
-		useReducer(gameStateReducer,
+		useReducer(reducer,
 			{
 				isPlayer: true,
 				matches: getInitialState(),
@@ -49,11 +49,11 @@ const App = () => {
 			dispatch({type: 'SET_IS_GAME_OVER'})
 		} else {
 			if (!state.isPlayer && !state.matches.includes(true) && !state.isWaiting) {
-				const newMatchSelectedState = selectMatches(
+				const newMatchesState = selectMatches(
 					getBestMove(state.matches.length),
 					state.matches
 				);
-				dispatch({type: 'SET_MATCHES', newMatchSelectedState})
+				dispatch({type: 'SET_MATCHES', newMatchesState})
 				dispatch({type: 'SWITCH_IS_WAITING'})
 			}
 
@@ -74,8 +74,8 @@ const App = () => {
 		}
 	}, [state.isGameOver, state.isPlayer])
 
-	const handleClickMatch = matchNumber => {
-		dispatch({type: 'SELECT_MATCH', matchNumber})
+	const handleClickMatch = number => {
+		dispatch({type: 'SELECT_MATCH', number})
 	};
 
 	const handleFinishTurn = matches => {
@@ -95,7 +95,7 @@ const App = () => {
 					<Match
 						visible={!el}
 						key={i}
-						matchNumber={i}
+						number={i}
 						onClick={handleClickMatch}
 					/>
 				))}
