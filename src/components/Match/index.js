@@ -42,7 +42,6 @@ const MatchTip = styled.div`
   opacity: ${props => props.visible ? '100' : '0'};
 `
 
-
 export default ({ visible, number, onClick }) => {
 	return (
 		<MatchContainer onClick={() => onClick(number)}>

@@ -4,11 +4,11 @@ import toJson from 'enzyme-to-json'
 import Hud from './index';
 
 describe('Hud', () => {
-  it('renders without crashing', () => {
+  test('renders without crashing', () => {
     shallow(<Hud />);
   });
 
-  it('matches snapshot', () => {
+  test('matches snapshot', () => {
     const wrapper = mount(<Hud userIsCurrentPlayer={true}/>)
     expect(toJson(wrapper)).toMatchSnapshot()
   });
