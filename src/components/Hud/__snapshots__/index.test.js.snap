@@ -92,7 +92,7 @@ exports[`Hud matches snapshot 1`] = `
         <p>
           Player: 
         </p>
-        User
+        Computer
       </div>
     </StyledComponent>
   </styled.div>

@@ -2086,6 +2086,7 @@ exports[`App matches snapshot 1`] = `
         </styled.div>
         <_default
           handleFinishTurn={[Function]}
+          isPlayer={true}
           matches={
             Array [
               false,
@@ -2103,7 +2104,6 @@ exports[`App matches snapshot 1`] = `
               false,
             ]
           }
-          userIsCurrentPlayer={true}
         >
           <styled.div>
             <StyledComponent
