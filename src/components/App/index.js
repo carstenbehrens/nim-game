@@ -75,7 +75,6 @@ const App = () => {
 	}, [state.isGameOver, state.isPlayer])
 
 	const handleClickMatch = number => {
-    console.log(number)
 		dispatch({type: 'SELECT_MATCH', number})
 	};
 
