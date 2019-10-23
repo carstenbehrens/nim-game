@@ -102,7 +102,7 @@ const App = () => {
 			</MatchesContainer>
 			<Hud
 				handleFinishTurn={handleFinishTurn}
-				userIsCurrentPlayer={state.isPlayer}
+				isPlayer={state.isPlayer}
 				matches={state.matches}
 			/>
 		</GameContainer>
