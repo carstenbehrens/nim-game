@@ -17,7 +17,7 @@ exports[`Match matches snapshot 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "bUhCHZ",
+            "lastClassName": "gmxNQ",
             "rules": Array [
               "
 	height: 8rem;
@@ -32,6 +32,7 @@ exports[`Match matches snapshot 1`] = `
 
   @media (min-width: 900px) {
     &:hover {
+      box-shadow: 0px 3px 46px -17px rgba(0,0,0,0.3);
       background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.3) 100%);
     }
   }
@@ -57,7 +58,7 @@ exports[`Match matches snapshot 1`] = `
       onClick={[Function]}
     >
       <div
-        className="sc-bdVaJa bUhCHZ"
+        className="sc-bdVaJa gmxNQ"
         onClick={[Function]}
       >
         <styled.div
