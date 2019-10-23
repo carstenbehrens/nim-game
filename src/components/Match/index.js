@@ -14,6 +14,7 @@ const MatchContainer = styled.div`
 
   @media (min-width: 900px) {
     &:hover {
+      box-shadow: 0px 3px 46px -17px rgba(0,0,0,0.3);
       background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.3) 100%);
     }
   }
