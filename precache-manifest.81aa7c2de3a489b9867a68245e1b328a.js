@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8f7ce6934463c53c17a70a1d7f51bcd4",
+    "revision": "6b398eb038b3ed3f74a7678904b3e46b",
     "url": "/nim-game/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nim-game/static/js/2.73968144.chunk.js"
   },
   {
-    "revision": "6042a33ae1766b78da66",
-    "url": "/nim-game/static/js/main.54db97a5.chunk.js"
+    "revision": "aea5897c2c923ba1c9bb",
+    "url": "/nim-game/static/js/main.e0cdd7f2.chunk.js"
   },
   {
     "revision": "f27078f89592780df6ac",
