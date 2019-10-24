@@ -3,7 +3,7 @@
 This is a React implementation of a specific kind of [Nim/Substraction](https://en.wikipedia.org/wiki/Nim) game.
 
 Check it out live here:
-[Live]()
+[Live](https://carstenbehrens.com/nim-game/)
 
 ## The Rules
 
