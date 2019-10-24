@@ -10,6 +10,13 @@ export const MatchContainer = styled.div`
   align-items: center;
   background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.1) 100%);
   border-radius: 3rem;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   @media (min-width: 900px) {
     &:hover {
