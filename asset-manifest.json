@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/nim-game/static/js/main.54db97a5.chunk.js",
+    "main.js.map": "/nim-game/static/js/main.54db97a5.chunk.js.map",
+    "runtime-main.js": "/nim-game/static/js/runtime-main.f2f69a08.js",
+    "runtime-main.js.map": "/nim-game/static/js/runtime-main.f2f69a08.js.map",
+    "static/js/2.73968144.chunk.js": "/nim-game/static/js/2.73968144.chunk.js",
+    "static/js/2.73968144.chunk.js.map": "/nim-game/static/js/2.73968144.chunk.js.map",
+    "index.html": "/nim-game/index.html",
+    "precache-manifest.73fcf0588497c9c55506a02e4fec40ac.js": "/nim-game/precache-manifest.73fcf0588497c9c55506a02e4fec40ac.js",
+    "service-worker.js": "/nim-game/service-worker.js"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f2f69a08.js",
+    "static/js/2.73968144.chunk.js",
+    "static/js/main.54db97a5.chunk.js"
+  ]
+}
