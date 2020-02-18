@@ -4,12 +4,12 @@
  * @returns {Boolean} - True if legal
  */
 export const isLegalMove = matches => {
-	const totalSelectedMatches = getSelectedMatches(matches);
-	return (
-		totalSelectedMatches > 0 &&
-		totalSelectedMatches < 4 &&
-		!selectedAllMatches(matches)
-	);
+  const totalSelectedMatches = getSelectedMatches(matches);
+  return (
+    totalSelectedMatches > 0 &&
+    totalSelectedMatches < 4 &&
+    !selectedAllMatches(matches)
+  );
 };
 
 /**
@@ -18,7 +18,7 @@ export const isLegalMove = matches => {
  * @returns {Number} - Number of selected elements
  */
 export const getSelectedMatches = matches =>
-	matches.filter(match => match === true).length;
+  matches.filter(match => match === true).length;
 
 /**
  * Checks if all matches are selected
@@ -26,10 +26,7 @@ export const getSelectedMatches = matches =>
  * @returns {Boolean} - Returns true if all matches are selected
  */
 export const selectedAllMatches = matches => {
-	return (
-		getSelectedMatches(matches) ===
-		matches.length
-	);
+  return getSelectedMatches(matches) === matches.length;
 };
 
 /**
@@ -38,7 +35,7 @@ export const selectedAllMatches = matches => {
  * @return {Boolean} - Returns true if the game is over
  */
 export const isGameOver = matches => {
-	return matches.length <= 1;
+  return matches.length <= 1;
 };
 
 /**
@@ -48,10 +45,10 @@ export const isGameOver = matches => {
  * @returns {Array} - The new array
  */
 export const selectMatches = (number, arr) => {
-	for (let i = 0; i < number; i++) {
-		arr[i] = !arr[i];
-	}
-	return arr;
+  for (let i = 0; i < number; i++) {
+    arr[i] = !arr[i];
+  }
+  return arr;
 };
 
 /**
@@ -60,8 +57,8 @@ export const selectMatches = (number, arr) => {
  * @returns {Number} - max number that can be selected
  */
 export const getMaxNumberToSelect = matches => {
-	const length = matches.length;
-	return length <= 3 ? length - 1 : 3;
+  const length = matches.length;
+  return length <= 3 ? length - 1 : 3;
 };
 
 /**
@@ -70,12 +67,12 @@ export const getMaxNumberToSelect = matches => {
  * @returns {Array} - Array with initial entries
  */
 export const getInitialState = (total = 13) => {
-  let initialArray = []
+  let initialArray = [];
   for (let i = 0; i < total; i++) {
-    initialArray.push(false)
+    initialArray.push(false);
   }
   return initialArray;
-}
+};
 
 /**
  * Returns the number of matches that the computer should remove
@@ -83,14 +80,14 @@ export const getInitialState = (total = 13) => {
  * @returns {Number} - Numbers of matches to remove
  */
 export const getBestMove = numberOfMatches => {
-	if (numberOfMatches === 2) {
-		return 1;
-	}
+  if (numberOfMatches === 2) {
+    return 1;
+  }
 
-	if (numberOfMatches === 3) {
-		return 2;
-	}
-	// If the remainder of numberOfMatches % 4 is 1 we return 3 so the next number is even again
-	// If the remainder of numberOfMatches % 4 is 0 we return 2 so the next number is even again
-	return !!numberOfMatches % 4 ? 3 : 2;
+  if (numberOfMatches === 3) {
+    return 2;
+  }
+  // If the remainder of numberOfMatches % 4 is 1 we return 3 so the next number is even again
+  // If the remainder of numberOfMatches % 4 is 0 we return 2 so the next number is even again
+  return !!numberOfMatches % 4 ? 3 : 2;
 };

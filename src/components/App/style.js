@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -53,34 +53,44 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const GameContainer = styled.div`
-	height: 100vh;
-	width: 100vw;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
-  background-blend-mode: multiply,multiply;
-	display: flex;
-	align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
+  display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: space-between;
 `;
 
 export const MatchesContainer = styled.div`
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 70%;
-	width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70%;
+  width: 90%;
 
-	@media (max-width: 900px) {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		place-items: center;
+  @media (max-width: 900px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
   }
-  
+
   @media (max-width: 600px) {
     width: 100%;
   }
 
   @media (max-width: 400px) {
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
   }
 `;
